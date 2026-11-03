@@ -24,6 +24,15 @@ Unzip or unpack the file into a folder of its own (on Windows and Linux the prog
 - **macOS:** if it says the app cannot be opened, right-click (or Control-click) the app and choose **Open**, then **Open** again. Or open **System Settings → Privacy & Security** and click **Open Anyway** by the message about OCAD Runner.
 - **Linux:** make the file runnable first if needed (`chmod +x OCAD_Runner.x86_64`). It needs the Cairo and Fontconfig libraries, which most desktops have (`libcairo2` and `libfontconfig1` on Debian and Ubuntu).
 
+## Read
+
+- [Install](docs/install.md): what you need, the warnings, and where your files are.
+- [User manual](docs/manual.md): how to do the common tasks, and what each window holds.
+- [Keys and mouse](docs/controls.md) during a Run.
+- [Glossary](docs/glossary.md): the terms in capitals.
+- [Roadmap](docs/roadmap.md): the versions so far and the ones to come.
+- [Reporting](docs/reporting.md): how to tell the author what you find.
+
 ## Tell us what you find
 
 Use [Issues](../../issues/new/choose): one for a bug, one for feedback. Say which version and computer you use, and what you did.
