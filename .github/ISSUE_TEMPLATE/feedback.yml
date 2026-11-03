@@ -1,0 +1,17 @@
+name: Feedback
+description: Something you like, miss or find hard to use.
+labels: [feedback]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Shown in About, for example 0.10.0-prealpha.
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What would you tell the author?
+    validations:
+      required: true
