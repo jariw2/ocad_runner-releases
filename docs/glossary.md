@@ -40,6 +40,10 @@ _Avoid_: 3D preview, terrain view
 In the Terrain Area Editor, a window where the user sets which way each contour and form line runs uphill, by clicking its downhill arrows. It opens in place of the build when the evaluation conversion finds direction issues, and from a button at any time; the Terrain Area keeps the user's directions.
 _Avoid_: arrow editor, contour editor
 
+**Saved Slope Directions**:
+The uphill sides the user set in the Slope Direction editor, saved on this computer so every cutout of the same map gets them: each line known by its exact curve (its Object's Symbol and every point as stored), so a line changed in OCAD no longer matches, and listed by the OCAD File it was saved from. A Terrain Area's own directions win over them.
+_Avoid_: slope database, stored slopes
+
 **Evaluation conversion**:
 The quick first step of building a Terrain Area: the contours and the ground alone, without Props or Runnability, to find the contours and form lines whose direction may be wrong (direction issues) before the real build.
 _Avoid_: test build, preview build
@@ -48,8 +52,11 @@ _Avoid_: test build, preview build
 The Runnability Rules, Roughness, Terrain Rules and Prop Rules saved together under a name, such as "Nordic forest" or "Sprint town", chosen when building a Terrain Area. Keyed by Standard Symbols, so one style suits every map of that kind of terrain. A built Terrain Area keeps a frozen copy of it and its name. Default is built in and cannot be changed.
 _Avoid_: Preset, profile (that is a player), rule set, theme
 
+**Export to PDF**:
+The editors' map's context menu, by a right-click on the 2D map where it does nothing else: the whole map at its own scale as a PDF for printing, alone, with a Course and its Control Descriptions, with the hillshade or Runnability, or as Slope Direction. _Avoid_: print, save as PDF.
+
 **Course Type**:
-How a Course is run, chosen in the Course Settings: Normal (the Controls in order), and the planned Score, Corridor, Window and Memory orienteering, Route Choice drill and Relocation drill. Only Normal can be chosen until each of the others is built. Part of what makes Runs of a Course comparable.
+How a Course is run, chosen in the Course Settings as its Orienteering Type (its label there since 2026-11-04): Normal (the Controls in order), Score (any Controls in any order within a time limit), Window (the map only within a radius of the Start, each Control and the Finish), Compass only (blank paper but for the Course, the north lines and the map's border), Corridor (the map only in a band along the course line), Line (only the course line on the map, its Controls punched in order), Memory (the map read only at the last Control punched, a time per Leg to read it, or both), Place the flags (no Control flags: the runner places each where it should stand, each metre off costing time), and Mirrored (the map and the terrain mirrored left to right, north still up, the map's text left out). Each can be chosen once built. Part of what makes Runs of a Course comparable.
 _Avoid_: Mode, game mode (for the Course), format
 
 **Difficulty**:
@@ -61,11 +68,15 @@ A place that suits a Control of a Difficulty, found among the Terrain Area's des
 _Avoid_: Spot, location (for this)
 
 **Random Course**:
-A Course made by **Add Controls…** with Make a Course (`RandomCourse`): the Event's Controls that suit a Difficulty, put in an order that comes near an ideal length and number of Controls, with at most the line crossings allowed, no Control angle sharper than allowed, and a Butterfly only when allowed.
+A Course made by **Add Controls…** with Make a Course (`RandomCourse`): the Event's Controls that suit a Difficulty, put in an order that comes near an ideal length and number of Controls, with at most the line crossings allowed, no Control angle sharper than allowed, and the Course Characteristic chosen.
 _Avoid_: Generated Course, auto Course
 
+**Course Characteristic**:
+What a Random Course is made to be like beyond its ideal length and number of Controls, one chosen in Make a Course: None, Direction changes (Legs turning clearly right and left by turns), Varied leg length, Homogenous leg length, Butterfly or Course crossing. Only steers the making; not stored on the Course.
+_Avoid_: Course type (that is the Orienteering Type), course style
+
 **Butterfly**:
-A Course visiting one Control twice, looping out from it and back, with at least two other Controls between the visits. Allowed in a Random Course only when asked for.
+A Course visiting one centre Control three times, neither first nor last, with a wing on each side of it between the visits: a loop of two Controls or more out from it and back, the wings not crossing each other. A Random Course has one only with the Butterfly Course Characteristic.
 _Avoid_: Loop, double visit
 
 **Control angle**:
@@ -84,9 +95,17 @@ _Avoid_: Control size, kite size
 A stretch of a Course's Leg line, Control circle or Finish rings (both together) left out by the course setter, so important map detail under it shows. It belongs to the Course and is drawn wherever its map is. Called Gap until 2026-10-27; Events saved then still read.
 _Avoid_: Gap, break
 
+**Course line**:
+The line a Course follows from its Start through each Control's circle to its Finish: straight Legs unless the course setter bends them in the Event Editor. Shown and edited only on Corridor and Line Courses: Corridor's map shows a band along it, Line's map only it.
+_Avoid_: Corridor line, route line, track (that is a Run's)
+
 **Map Tool**:
-In the Event Editor, one of the buttons that set what a click or drag on the map does: Add Start, Add Control, Add Finish, Move, Move Flag, Cut and Delete. Called Place until 2026-10-27.
+In the Event Editor, one of the buttons that set what a click or drag on the map does: Add Start, Add Control, Add Finish, Move, Move Flag, Cut and Delete. Called Place until 2026-10-27. Disabled in the 3D View and with Preview Course.
 _Avoid_: Place mode, Place button
+
+**Preview Course**:
+In the Event Editor, an option (off at first) showing the chosen Course's 2D map as its Run's map is at the Start for its Course Type, nothing on it editable meanwhile.
+_Avoid_: Run preview, preview mode
 
 **Control**:
 A place in an Event that a runner must visit and punch when it is on their Course, marked on the ground by a flag showing its code. Several Courses of the Event may use it.
@@ -194,7 +213,7 @@ A Course setting, on by default: the map's full black is printed over the Course
 _Avoid_: Black on top
 
 **Map Type**:
-Which map a Terrain Area's map is drawn as: the **normal map**; **contours only**, every Symbol linked to a landform (1xx) with the north lines; or **contours and cliffs**, the same with the impassable and passable cliffs. All three are drawn when the Terrain Area is built and kept in it. From 0.7.0 each Course chooses one, the normal map by default.
+Which map a Terrain Area's map is drawn as: the **normal map**; **contours only**, every Symbol linked to a landform (1xx) with the north lines; or **contours and cliffs**, the same with the impassable and passable cliffs; or **no footpaths**, the normal map without its footpaths and small paths (505-508), roads and everything else kept. All four are drawn when the Terrain Area is built and kept in it. From 0.7.0 each Course chooses one, the normal map by default.
 _Avoid_: Map style, map mode, layer
 
 **Leg Alignment**:

@@ -30,6 +30,7 @@ Unzip or unpack the file into a folder of its own (on Windows and Linux the prog
 - [User manual](docs/manual.md): how to do the common tasks, and what each window holds.
 - [Keys and mouse](docs/controls.md) during a Run.
 - [Glossary](docs/glossary.md): the terms in capitals.
+- [What's new](docs/changes.md): everything new and changed in the latest version, one line each.
 - [Roadmap](docs/roadmap.md): the versions so far and the ones to come.
 - [Reporting](docs/reporting.md): how to tell the author what you find.
 
