@@ -30,13 +30,13 @@ The test builds in this repository start at 0.11.0.
 
 **0.12 Orienteering modes.** Nine kinds of Course to run: Normal, Score, Window, Corridor, Line, Memory, Compass only, Place the flags and Mirrored, and a Flag Size with no flag at all. Each has its own rules in the Run, its own Perfect Race and its own columns in Analyse. Also a Preview Course in the Event Editor, Export to PDF and Export Course, random Courses with a Characteristic (changes of direction, varied or even Legs, Butterfly, crossing), Line Courses that snap to paths, streams and walls, much richer ground in 3D (vegetation told apart, water, footbridges, power lines, stone walls, ruins), faster trees, and a Swedish translation.
 
+**0.13 Analyse's Numbers.** The Numbers tab filled in: This Run, with facts about a Run (the Perfect Race's losses, distance and pace, stops, time looking at the map, mistakes) and a table of its Legs, and Progression, with your Runs over time in graphs and your training per day. Also the Window, Corridor, Memory, Compass only, Place the flags and No flag Courses played through and fixed, a Runs list filtered by Orienteering Type, and trees and bushes grown from photos of Swedish trees.
+
 ## Being built
 
-**0.13 Analyse's Numbers.** The Numbers tab filled in: facts about a Run, time spent looking at the map, time lost to each kind of mistake, and your progress over time with graphs. First, the Window, Corridor, Memory, Compass only, Place the flags and No flag Courses are played through as Runs and in Analyse and fixed where needed.
+**0.14 Realistic world.** Realistic assets in place of the placeholders, an animated runner in the Third-Person View with clothes to choose from, graphics quality settings aimed at 60 fps on a mid-range gaming PC, water plants, weather for a Course, and Terrain Rules and Prop Rules edited in the Terrain Styles window.
 
 ## Planned
-
-**0.14 Realistic world.** Realistic assets in place of the placeholders, an animated runner in the Third-Person View with clothes to choose from, graphics quality settings aimed at 60 fps on a mid-range gaming PC, water plants, weather for a Course, and Terrain Rules and Prop Rules edited in the Terrain Styles window.
 
 **0.15 The runner's senses.** Footsteps that depend on the ground, the rustle of bushes, a finish sound and ambient sound, and a text status line while running.
 
