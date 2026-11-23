@@ -10,6 +10,18 @@ An orienteering game and training tool. The player runs Courses on Terrain Areas
 One person who plays the game, with their own name, Runs and Profile options (their key setup and keys, the mouse, the camera and the language). Several Profiles can share a computer, but only one plays at a time. A Profile is known by an id made with it, not by its name, so it can be renamed and keep its Runs and the Terrain Areas and Events it owns.
 _Avoid_: User, account, player (for the stored person)
 
+**House**:
+A building (521) made by the converter from its own outline: walls, a plinth and a roof (gable, hipped at its ends, slanted, cross gables or flat), with a **use** guessed from its size, shape and surroundings (shed, garage, cabin, dwelling, barn, apartment block, hall) that sets its heights and colours. **Twins**, houses of the same outline turned within 150 m of each other in a chain, share their use, roof and heights and mostly their colours.
+_Avoid_: building model, house mesh
+
+**Graphics Detail**:
+A Profile option on the Display tab, steps 1 (Lowest) to 10 (Ultra), 7 (Standard) by default: how much of the 3D world a Run, the editors' 3D Views and Analyse draw, so a weaker computer can run the game. Lower steps leave decorative Props out and draw the rest nearer; nothing that stops or slows the runner is ever left out, and the Speed Model never changes with it. A Run's fog follows its trees' distance, so no step sees farther than another. The steps are listed in docs/manual.md.
+_Avoid_: Graphics quality, quality preset, LOD setting
+
+**Water Reflection**:
+On Graphics Detail's Ultra, the water mirroring the world: a second camera, the view's camera mirrored under the level of the water most in view, draws the trees, ground and sky into a picture the water shows, bent by its ripples (`WaterReflection`). One level at a time; other water reflects the sky's light only, as below Ultra. Not screen-space reflections, which were tried and left out.
+_Avoid_: SSR, planar reflection (in user-facing text)
+
 ### Courses
 
 **Owner**:
@@ -49,11 +61,39 @@ The quick first step of building a Terrain Area: the contours and the ground alo
 _Avoid_: test build, preview build
 
 **Terrain Style**:
-The Runnability Rules, Roughness, Terrain Rules and Prop Rules saved together under a name, such as "Nordic forest" or "Sprint town", chosen when building a Terrain Area. Keyed by Standard Symbols, so one style suits every map of that kind of terrain. A built Terrain Area keeps a frozen copy of it and its name. Default is built in and cannot be changed.
+How a map becomes a 3D world, saved under a name such as "Nordic forest" or "Sprint town" and chosen when building a Terrain Area: for each Standard Symbol its Runnability, Roughness, ground texture and Props (which assets, their weights, density, scale and Tweaks), and the Unmapped Props of open forest. Keyed by Standard Symbols, so one style suits every map of that kind of terrain. A built Terrain Area keeps a frozen copy of it and its name. Either a Stock Style or a user's own style.
 _Avoid_: Preset, profile (that is a player), rule set, theme
 
+**Stock Style**:
+A Terrain Style that comes with the game, such as Default or a seasonal style; read-only for the user, designed in Development Mode.
+_Avoid_: built-in style, factory style, template
+
+**Base**:
+The Stock Style a user's own Terrain Style is made from. The style keeps only what it changes from its Base and follows the rest, so an update to the Base reaches it.
+_Avoid_: parent, template
+
+**Asset Kind**:
+What kind of thing a predefined asset is, such as Tree, Bush, Boulder, Stone, Litter or Fence. Each asset has exactly one, and each place in a Terrain Style that takes assets takes only one kind, so a boulder can never be put where trees go.
+_Avoid_: group, Prop Group (that is the converter's spacing between Props), category, type
+
+**Slot**:
+One place in a Terrain Style that takes models: what one rule of a Standard Symbol puts in the terrain, such as the forest's trees in 405 or the litter on ground with nothing mapped. It takes models of one Asset Kind only, each with a weight.
+_Avoid_: socket, entry, rule (that is the converter's Prop Rule behind it)
+
+**Surface**:
+What the ground of an area or line Standard Symbol looks like in a Terrain Style: a ground texture, a colour, or a texture tinted by a colour, such as a footpath's worn earth.
+_Avoid_: material, skin, ground type
+
+**Tweak**:
+A change to how a predefined asset looks or how large it is in one place of a Terrain Style, such as its tint, scale range, texture or moss; the asset itself is never changed.
+_Avoid_: modification, override, customisation
+
+**Development Mode**:
+The developer's own way of running the game: a debug build with Diagnostic Tools on, where Stock Styles can be edited and saved with the game; with Write-protect on (at first), edited only in memory.
+_Avoid_: debug mode, editor mode, admin
+
 **Export to PDF**:
-The editors' map's context menu, by a right-click on the 2D map where it does nothing else: the whole map at its own scale as a PDF for printing, alone, with a Course and its Control Descriptions, with the hillshade or Runnability, or as Slope Direction. _Avoid_: print, save as PDF.
+The editors' map's context menu, by a right-click on the 2D map where it does not remove a bend, a moved number or a cut (over a place it also has the delete item): the whole map at its own scale as a PDF for printing, alone, with a Course and its Control Descriptions, with the hillshade or Runnability, or as Slope Direction. _Avoid_: print, save as PDF.
 
 **Course Type**:
 How a Course is run, chosen in the Course Settings as its Orienteering Type (its label there since 2026-11-04): Normal (the Controls in order), Score (any Controls in any order within a time limit), Window (the map only within a radius of the Start, each Control and the Finish), Compass only (blank paper but for the Course, the north lines and the map's border), Corridor (the map only in a band along the course line), Line (only the course line on the map, its Controls punched in order), Memory (the map read only at the last Control punched, a time per Leg to read it, or both), Place the flags (no Control flags: the runner places each where it should stand, each metre off costing time), and Mirrored (the map and the terrain mirrored left to right, north still up, the map's text left out). Each can be chosen once built. Part of what makes Runs of a Course comparable.
@@ -201,7 +241,7 @@ _Avoid_: Running speed (the name until 0.6.0), time scale, fast forward
 The camera at the runner's eye height, looking where the runner looks.
 
 **Third-Person View**:
-The camera fixed a few metres behind the runner, for players who get motion sick in the First-Person View. Chosen per Profile in its Profile options, never switched during a Run.
+The camera fixed a few metres behind the runner, for players who get motion sick in the First-Person View. Chosen per Profile in its Profile options as the view a Run begins in; Enter switches between First- and Third-Person View during a Run, and a Run put aside resumes in the view it was left in.
 _Avoid_: Chase camera, follow camera
 
 **Map View**:

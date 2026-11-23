@@ -32,29 +32,35 @@ The test builds in this repository start at 0.11.0.
 
 **0.13 Analyse's Numbers.** The Numbers tab filled in: This Run, with facts about a Run (the Perfect Race's losses, distance and pace, stops, time looking at the map, mistakes) and a table of its Legs, and Progression, with your Runs over time in graphs and your training per day. Also the Window, Corridor, Memory, Compass only, Place the flags and No flag Courses played through and fixed, a Runs list filtered by Orienteering Type, and trees and bushes grown from photos of Swedish trees.
 
+**0.14 Realistic world.** Terrain Styles as whole files you can edit in the Terrain Styles window (Props, Surfaces, Tweaks, Stock Styles), realistic houses, Settlement areas by kind, many new tree, bush and plant models, fences, walls, boulders, water plants, watercourses that flow, a Graphics Detail slider, the Model Viewer, and a loading screen, Enter for Third-Person View and a jump key in a Run.
+
 ## Being built
 
-**0.14 Realistic world.** Realistic assets in place of the placeholders, an animated runner in the Third-Person View with clothes to choose from, graphics quality settings aimed at 60 fps on a mid-range gaming PC, water plants, weather for a Course, and Terrain Rules and Prop Rules edited in the Terrain Styles window.
+**0.15 Realistic world, continued.** More of the world made realistic: the ground foliage made anew, per-area ground textures, moss on stone walls, more trees and bushes, waterfalls, timber stacks and signposts, a card for Drills on the main menu, and the Terrain Rules and Prop Rules edited in the Terrain Styles window. An animated runner with clothes to choose from, and graphics quality settings aimed at 60 fps on a mid-range gaming PC, are planned here as well.
 
 ## Planned
 
-**0.15 The runner's senses.** Footsteps that depend on the ground, the rustle of bushes, a finish sound and ambient sound, and a text status line while running.
+**0.16 The runner's senses.** Footsteps that depend on the ground, the rustle of bushes, a finish sound and ambient sound, and a text status line while running.
 
-**0.16 Night Orienteering.** Runs in the dark by the light of a headlamp, with reflective flags.
+**0.17 Night Orienteering.** Runs in the dark by the light of a headlamp, with reflective flags.
 
-**0.17 Contours and Symbol guesses across the maps.** Correct 3D contours and good Symbol guesses on every map tested, so fewer corrections are needed by hand.
+**0.18 Realism for sprint maps.** The realism of the forest maps brought to sprint maps (ISSprOM): urban terrain, buildings, fences, paved ground, street furniture and how a sprint runner moves through them.
 
-**0.18 Choosing what to run.** The screen where you pick an Event and a Course redesigned: what each Course tells you before the Run, your own record on it, finding a Course among many, and Leg Practice chosen more plainly.
+**0.19 Drills.** Training drills rather than Courses: short exercises for the compass, a single Leg and the like.
 
-**0.19 Ready for others.** Sharing Terrain Areas and Events, a first-run path that brings a new player to a Run without help, a keys overview in the game, and Linux packaging.
+**0.20 Contours and Symbol guesses across the maps.** Correct 3D contours and good Symbol guesses on every map tested, so fewer corrections are needed by hand.
 
-**0.20 UI and testing pass.** A pass over the whole workflow, with tests and checklists for each part.
+**0.21 Choosing what to run.** The screen where you pick an Event and a Course redesigned: what each Course tells you before the Run, your own record on it, finding a Course among many, and Leg Practice chosen more plainly.
 
-## Alpha (from 0.21)
+**0.22 Ready for others.** Sharing Terrain Areas and Events, a first-run path that brings a new player to a Run without help, a keys overview in the game, and Linux packaging.
+
+**0.23 UI and testing pass.** A pass over the whole workflow, with tests and checklists for each part.
+
+## Alpha (from 0.24)
 
 All major features in place with reasonable polish. Alpha releases fix what testing finds, and no known bug may lose or split saved data. The **Costume Designer** lets you design the runner's clothes.
 
-## Beta (from 0.22)
+## Beta (from 0.25)
 
 Starts when the file formats are stable, so older files are converted when found. Planned for beta: Windows and macOS releases tested on each system, gamepads, translations, editing Collision Outlines and single Props by hand, progress over time across Courses, a ghost runner showing an earlier Run, other runners in the forest simulated by the computer, export of a Run as GPX, printing a Course on its map to PDF, and perhaps a demo Terrain Area if a club allows its map to be used.
 
